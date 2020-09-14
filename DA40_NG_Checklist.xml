@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+
+<SimBase.Document Type="Checklist" version="1,0">
+	<Checklist.Checklist>
+
+		<IncludeCheckpointLibrary FileName="CheckpointsLibrary\\Asobo_DefaultCheckpointLibrary.xml"/>
+
+
+		<Step ChecklistStepId="PREFLIGHT_GATE">
+
+			<!-- Preflight inspection - cockpit 1/2 -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_PREFLIGHT_INSPECTION_COCKPIT_1">
+					<Checkpoint ReferenceId="Aircraft_Doc_Check"/>
+		<!--			<Checkpoint ReferenceId="Pitot_Cover_Install"/> -->
+					<Checkpoint Id="Pitot_Cover_Remove">
+						<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_PITOT_COVER" ExpectationTT="TT:GAME.CHECKLIST_REMOVE"/>
+					</Checkpoint>
+					<Checkpoint Id="CABIN_INTERIOR_LOOSE_OBJECTS">
+						<CheckpointDesc SubjectTT="TT:Check interior for foreign or loose objects" ExpectationTT="TT:GAME.CHECKLIST_SECURE"/>
+					</Checkpoint>
+					<Checkpoint ReferenceId="CONTROL_STICK_FREE_AND_CORRECT_FULL_TRAVEL"/>
+					<Checkpoint ReferenceId="CIRCUIT_BREAKERS_ALL_PUSHED"/>
+					<Checkpoint ReferenceId="EMERGENCY_FUEL_VALVE_NORMAL"/>
+					<Checkpoint ReferenceId="Engine_Master_Check_Off"/>
+					<Checkpoint ReferenceId="ECU_SWAP_AUTOMATIC"/>
+					<Checkpoint ReferenceId="AUX_FUEL_PUMPS_OFF"/>
+					<Checkpoint Id="ESS_BUS">
+						<CheckpointDesc SubjectTT="TT:Essential bus off" ExpectationTT="TT:GAME.CHECKLIST_CHECK_OFF"/>
+					</Checkpoint>
+					<Checkpoint ReferenceId="Avionics_Master_Switch_Off"/>
+				<!--	<Checkpoint ReferenceId="Master_Switch_Off"/> -->
+					<Checkpoint ReferenceId="Master_Switch_Alt_And_Bat_On">
+						<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_ELECTRIC_MASTER" ExpectationTT="TT:GAME.CHECKLIST_ON"/>
+						<Instrument Id="ELECTRICAL_Knob_Starter"/>
+					</Checkpoint>
+					<Checkpoint ReferenceId="Low_Volts_Annunciator_Check_Off"/>
+					<Checkpoint ReferenceId="FUEL_QUANTITY_CHECK"/>
+					<Checkpoint ReferenceId="EXT_LIGHTS_SET"/>
+					<Checkpoint ReferenceId="PITOT_HEAT_ON_CHECK_WORKING"/>
+					<Checkpoint ReferenceId="Parking_Brake_Set"/>
+					<Checkpoint ReferenceId="STALL_WARNING_TEST"/>
+					<Checkpoint ReferenceId="Check_Ext_Lights"/>
+					<Checkpoint ReferenceId="PITOT_HEAT_CHECK_OFF"/>
+					<Checkpoint ReferenceId="EXT_LIGHTS_OFF"/>
+					<Checkpoint ReferenceId="Master_Switch_Alt_And_Bat_Off">
+						<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_ELECTRIC_MASTER" ExpectationTT="TT:GAME.CHECKLIST_ON"/>
+						<Instrument Id="ELECTRICAL_Knob_Starter"/>
+					</Checkpoint>
+			</Page>
+
+
+			<!-- Before Starting Engine -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_BEFORE_STARTING_ENGINE">
+				<Checkpoint ReferenceId="Preflight_Inspection_Complete"/>
+				<Checkpoint Id="BAGGAGE_SECURE">
+					<CheckpointDesc SubjectTT="TT:Baggage and tow bar" ExpectationTT="TT:GAME.CHECKLIST_CHECK_SECURE"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="EMERGENCY_FUEL_VALVE_NORMAL"/>
+				<Checkpoint ReferenceId="POWER_LEVER_IDLE"/> <!-- "check idle" -->
+				<Checkpoint ReferenceId="Parking_Brake_Set"/>
+				<Checkpoint Id="ALT_AIR_CLOSED">
+					<CheckpointDesc SubjectTT="TT:Alternate air closed" ExpectationTT="TT:GAME.CHECKLIST_CHECK"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Master_Switch_Alt_And_Bat_Off">
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_ELECTRIC_MASTER" ExpectationTT="TT:GAME.CHECKLIST_OFF"/>
+					<Instrument Id="ELECTRICAL_Knob_Starter"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Avionics_Master_Switch_Off"/>
+				<Checkpoint Id="ESS_BUS">
+					<CheckpointDesc SubjectTT="TT:Essential bus off" ExpectationTT="TT:GAME.CHECKLIST_CHECK_OFF"/>
+				</Checkpoint>
+			<!--	<Checkpoint ReferenceId="Static_Pressure_Alt_Source_Valve_Off"/> --> <!-- No static switch -->
+				<Checkpoint ReferenceId="Engine_Master_Check_Off"/>
+				<Checkpoint ReferenceId="ECU_SWAP_AUTOMATIC"/>
+				<Checkpoint ReferenceId="AUX_FUEL_PUMPS_OFF"/>
+				<Checkpoint ReferenceId="EXT_LIGHTS_OFF"/>
+				<Checkpoint ReferenceId="INT_LIGHTS_OFF"/>
+				<Checkpoint Id="Emergency_Switch_Off">
+					<CheckpointDesc SubjectTT="TT:Emergency switch" ExpectationTT="TT:GAME.CHECKLIST_CHECK_OFF"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Emergency_Locator_Beacon_Armed"/>
+				<Checkpoint ReferenceId="CIRCUIT_BREAKERS_ALL_PUSHED"/>
+				<Checkpoint ReferenceId="Flaps_0">
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="TT:GAME.CHECKLIST_UP"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="PITOT_HEAT_CHECK_OFF"/>
+				<Checkpoint ReferenceId="FUEL_TRANSFER_OFF"/>
+				<Checkpoint ReferenceId="Master_Switch_Alt_And_Bat_On">
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_ELECTRIC_MASTER" ExpectationTT="TT:GAME.CHECKLIST_ON"/>
+					<Instrument Id="ELECTRICAL_Knob_Starter"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Passenger_Briefing_Complete"/>
+				<Checkpoint ReferenceId="SEAT_PEDALS_HARNESS_ADJUST_LOCK"/>
+				<Checkpoint ReferenceId="Doors_Closed_And_Locked"/>
+				<Checkpoint ReferenceId="FUEL_QUANTITY_CHECK"/>
+				<Checkpoint ReferenceId="EIS_CHECK"/>
+				<Checkpoint ReferenceId="POWER_LEVER_IDLE"/>
+				<Checkpoint ReferenceId="Strobe_Light_On">
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_STROBES" ExpectationTT="TT:GAME.CHECKLIST_ON"/>
+				</Checkpoint>
+			</Page>
+
+			<!-- Starting Engine -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_STARTING_ENGINE">
+			<!--	<Checkpoint ReferenceId="Strobe_Light_On">
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_STROBES" ExpectationTT="TT:GAME.CHECKLIST_ON"/>
+				</Checkpoint> -->
+				<Checkpoint ReferenceId="Propeller_Area_Clear"/>
+
+				<Checkpoint ReferenceId="ENGINE_MASTER_ON_WAIT_UNTIL_GLOW_DA40_NG">
+					<ForceCamera name="Instruments06"/>
+					<Instrument Id="HTML:AS1000_PFD:Annunciations"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="ELECTRIC_MASTER_START"> <!-- wording -->
+					<Instrument Id="ELECTRICAL_Knob_Starter"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Annunciator_Panel_Engine_Instruments_check"/>
+				<Checkpoint Id="VOLTS_AND_LOADS_IND">
+					<CheckpointDesc SubjectTT="TT:Voltage, Electrical load" ExpectationTT="TT:GAME.CHECKLIST_CHECK"/>
+				</Checkpoint>
+			</Page>
+
+			<!-- After Starting Engine -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_AFTER_STARTING_ENGINE_1">
+				<Checkpoint ReferenceId="Oil_Pressure_Check"/>
+				<Checkpoint ReferenceId="IDLE_RPM_CHECK_710_30_RPM"/>
+				<Checkpoint ReferenceId="CIRCUIT_BREAKERS_ALL_PUSHED"/>
+				<Checkpoint ReferenceId="PITOT_HEAT_ON_CHECK_WORKING"/>
+				<Checkpoint ReferenceId="PITOT_HEAT_CHECK_OFF"/>
+				<Checkpoint ReferenceId="Avionics_Bus_Switch_On">
+					<SetTemplateAction Id="Toggle Avionics Bus" Copilot="True" Condition="TestValueFalse" Once="true" Code="22 (&gt;K:ELECTRICAL_CIRCUIT_TOGGLE) 23 (&gt;K:ELECTRICAL_CIRCUIT_TOGGLE)"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="FMS_GPS_FLIGHT_PLAN_AS_DESIRED"/>
+				<Checkpoint ReferenceId="Autopilot_CHECK"/>
+				<Checkpoint ReferenceId="INT_LIGHTS_AS_REQUIRED"/>
+				<Checkpoint ReferenceId="POSITION_LANDING_TAXI_LIGHTS_AS_REQUIRED"/>
+				<!-- <Checkpoint ReferenceId="POSITION_LANDING_TAXI_LIGHTS_AS_REQUIRED"/> -->
+				<Checkpoint ReferenceId="FLAPS_CHECK_FUNCTION_INDICATOR_SET_TO"/>
+				<Checkpoint ReferenceId="ALTIMETERS_SETTING_CHECK"/>
+				<Checkpoint ReferenceId="Attitude_Indicator_Check_Working"/>
+				<Checkpoint ReferenceId="TRANSPONDER_AS_REQUIRED"/>
+				<Checkpoint ReferenceId="Oil_Temperature_Check"/>
+				<Checkpoint ReferenceId="Parking_Brake_Release"/> <!--  Put here instead of taxi out for MVP -->
+			</Page>
+
+		</Step>
+
+
+
+		<Step ChecklistStepId="PREFLIGHT_TAXI_OUT">
+
+			<!-- Taxi -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_TAXI">
+				<Checkpoint ReferenceId="Brakes_Test"/>
+				<Checkpoint ReferenceId="FLIGHT_INSTRUMENTS_CHECK"/>
+			</Page>
+
+		</Step>
+
+
+
+		<Step ChecklistStepId="FLIGHT_RUNWAY">
+
+			<!-- Run-up 1/3 -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_RUN_UP_1">
+			</Page>
+
+			<!-- BEFORE take-off -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_BEFORE_TAKE_OFF">
+				<Checkpoint ReferenceId="Parking_Brake_Set"/>
+				<Checkpoint ReferenceId="Seat_Belt_Adjust_And_Lock"/>
+				<Checkpoint ReferenceId="PILOT_AND_PASSENGER_SEAT_BACKS_MOST_UPRIGHT_POSITION"/>
+				<Checkpoint ReferenceId="Doors_Closed_And_Locked"/>
+				<Checkpoint ReferenceId="CIRCUIT_BREAKERS_ALL_PUSHED"/>
+				<Checkpoint ReferenceId="Elevator_Trim_Neutral"/>
+				<Checkpoint ReferenceId="FLAPS_TAKEOFF"/>
+				<Checkpoint ReferenceId="CONTROL_STICK_FREE_AND_CORRECT_FULL_TRAVEL"/>
+				<Checkpoint ReferenceId="POWER_LEVER_IDLE"/>
+				<Checkpoint ReferenceId="Engine_Indicating_System_Check_Parameters"/>
+				<Checkpoint ReferenceId="PITOT_HEAT_AS_REQUIRED"/>
+				<Checkpoint ReferenceId="TRANSPONDER_AS_REQUIRED"/>
+				<Checkpoint ReferenceId="AUX_FUEL_PUMPS_ON"/>
+				<Checkpoint ReferenceId="Parking_Brake_Release"/>
+			</Page>
+		</Step>
+
+
+
+		<Step ChecklistStepId="FLIGHT_TAKEOFF">
+
+			<!-- Normal take-off -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_NORMAL_TAKE_OFF">
+			</Page>
+
+
+			<!-- Enroute climb -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_ENROUTE_CLIMB">
+				<Checkpoint ReferenceId="Flaps_0">
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="TT:GAME.CHECKLIST_UP"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="AUX_FUEL_PUMPS_OFF"/>
+				<Checkpoint ReferenceId="CLIMB_POWER_SET"/>
+				<Checkpoint ReferenceId="Landing_Light_Off"/>
+			</Page>
+		</Step>
+
+
+
+		<Step ChecklistStepId="FLIGHT_CRUISE">
+			<!-- Cruise -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_CRUISE">
+				<Checkpoint ReferenceId="FUEL_TRANSFER_AS_REQUIRED"/>
+			</Page>
+		</Step>
+
+
+
+
+		<Step ChecklistStepId="FLIGHT_DESCENT">
+
+			<!-- Descent -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_DESCENT">
+				<Checkpoint ReferenceId="ALTIMETERS_SETTING_CHECK"/>
+				<Checkpoint ReferenceId="COM_NAV_GPS_SET_CHECK"/>
+				<Checkpoint ReferenceId="Seat_Belt_Adjust_And_Lock"/>
+				<Checkpoint ReferenceId="PILOT_AND_PASSENGER_SEAT_BACKS_MOST_UPRIGHT_POSITION"/>
+				<Checkpoint ReferenceId="FUEL_TRANSFER_AS_REQUIRED"/>
+				<Checkpoint ReferenceId="Parking_Brake_Release"/>
+				<Checkpoint ReferenceId="AUX_FUEL_PUMPS_ON"/>
+				<Checkpoint ReferenceId="Landing_Light_On"/>
+			</Page>
+
+		</Step>
+
+
+
+
+		<Step ChecklistStepId="LANDING_APPROACH">
+
+			<!-- Before landing -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_BEFORE_LANDING">
+				<Checkpoint ReferenceId="FLAPS_TAKEOFF">
+					<Clue name="TT:Set flaps to T/O on latest base leg"/>
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="TT:GAME.CHECKLIST_SET_FOR_TAKEOFF"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="FLAPS_LDG">
+					<Clue name="TT:Set flaps to LDG on final"/>
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="TT:GAME.CHECKLIST_LDG"/>
+				</Checkpoint>
+			</Page>
+
+
+		</Step>
+
+		<Step ChecklistStepId="LANDING_TOUCHDOWN">
+
+			<!-- Normal landing -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_NORMAL_LANDING">
+			</Page>
+
+		</Step>
+
+		<Step ChecklistStepId="LANDING_GROUNDROLL">
+
+			<!-- After landing -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_AFTER_LANDING">
+				<Checkpoint ReferenceId="Flaps_0">
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_FLAPS" ExpectationTT="TT:GAME.CHECKLIST_UP"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="PITOT_HEAT_CHECK_OFF"/>
+				<Checkpoint ReferenceId="AUX_FUEL_PUMPS_OFF"/>
+				<Checkpoint Id="ALT_AIR_CLOSED">
+					<CheckpointDesc SubjectTT="TT:Alternate air closed" ExpectationTT="TT:GAME.CHECKLIST_CHECK"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Landing_Light_As_Required"/>
+				<Checkpoint ReferenceId="Taxi_Light_As_Required"/>
+
+			</Page>
+
+		</Step>
+
+
+
+		<Step ChecklistStepId="LANDING_TAXI_IN">
+		</Step>
+
+
+
+		<Step ChecklistStepId="LANDING_GATE">
+			<!-- Parking -->
+			<Page SubjectTT="TT:GAME.CHECKLIST_PARKING">
+				<Checkpoint ReferenceId="Parking_Brake_Set"/>
+				<Checkpoint Id="Power_Level_10">
+					<CheckpointDesc SubjectTT="TT:Power lever" ExpectationTT="TT:Max 10% for 1 min."/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Emergency_Locator_Beacon_Armed"/>
+				<Checkpoint ReferenceId="Engine_Indicating_System_Check_Parameters"/>
+				<Checkpoint ReferenceId="Avionics_Master_Switch_Off"/>
+				<Checkpoint ReferenceId="ALL_ELECTRICAL_EQUIPMENT_OFF_DA62_SHUTDOWN"/>
+				<Checkpoint ReferenceId="Turn_Off_EngineMaster"/>
+				<Checkpoint ReferenceId="Strobe_Light_Off"/>
+				<Checkpoint ReferenceId="Master_Switch_Off"/>
+			</Page>
+
+
+			<!-- Securing-->
+			<Page SubjectTT="TT:GAME.CHECKLIST_SECURING">
+			</Page>
+
+		</Step>
+
+	</Checklist.Checklist>
+</SimBase.Document>
